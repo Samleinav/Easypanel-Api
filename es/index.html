@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Easypanel API Documentation</title>
+    <title>Documentación Interactiva API Easypanel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chosen Palette: Slate -->
     <!-- Application Structure Plan: I've designed a two-column layout, a standard for API documentation, for optimal usability. A fixed navigation sidebar on the left allows users to quickly jump between API sections (Authentication, Projects, Services, etc.) without losing context. The main content area on the right displays the detailed endpoint information. This structure is intuitive for developers, facilitates easy exploration, and keeps the information organized and accessible. User flow is simple: select an endpoint from the nav, view details, and copy code snippets. -->
@@ -32,14 +32,14 @@
     <div class="flex flex-col md:flex-row">
         <aside class="w-full md:w-1/4 lg:w-1/5 md:h-screen md:sticky md:top-0 p-6 md:p-8 bg-white border-r border-slate-200">
             <h1 class="text-2xl font-bold text-slate-900 mb-2">Easypanel API</h1>
-            <p class="text-sm text-slate-500 mb-8">Documentación Interactiva (No Oficial)</p>
-             <div class="mb-8">
+            <p class="text-sm text-slate-500 mb-4">Documentación Interactiva (No Oficial)</p>
+            <div class="mb-8">
                 <div class="flex items-center space-x-2">
-                    <span class="font-bold text-sm bg-sky-500 text-white rounded-md px-2 py-1">ES</span>
                     <a href="https://samleinav.github.io/Easypanel-Api/" class="text-sm text-slate-500 hover:text-sky-500 transition-colors">EN</a>
+                    <span class="font-bold text-sm bg-sky-500 text-white rounded-md px-2 py-1">ES</span>
                 </div>
             </div>
-            <nav id="navigation" class="space-y-4">
+            <nav id="navigation" class="space-y-4 text-sm">
                 <div>
                     <h2 class="font-semibold text-slate-900 mb-2">General</h2>
                     <ul class="space-y-1 text-slate-600">
@@ -64,13 +64,25 @@
                     </ul>
                 </div>
                  <div>
-                    <h2 class="font-semibold text-slate-900 mb-2">Servicios</h2>
+                    <h2 class="font-semibold text-slate-900 mb-2">Servicios de App</h2>
                     <ul class="space-y-1 text-slate-600">
-                        <li><a href="#services-state" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Control de Estado</a></li>
-                        <li><a href="#services-deploy" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Desplegar Servicio</a></li>
-                        <li><a href="#services-delete" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Eliminar Servicio</a></li>
-                        <li><a href="#services-env" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Actualizar Env</a></li>
-                        <li><a href="#services-resources" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Actualizar Recursos</a></li>
+                        <li><a href="#services-app-create" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Crear Servicio App</a></li>
+                        <li><a href="#services-app-source" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Actualizar Origen</a></li>
+                        <li><a href="#services-app-state" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Control de Estado</a></li>
+                        <li><a href="#services-app-deploy" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Desplegar Servicio</a></li>
+                        <li><a href="#services-app-delete" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Eliminar Servicio</a></li>
+                        <li><a href="#services-app-env" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Actualizar Env</a></li>
+                        <li><a href="#services-app-resources" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Actualizar Recursos</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h2 class="font-semibold text-slate-900 mb-2">Servicios de BD</h2>
+                    <ul class="space-y-1 text-slate-600">
+                        <li><a href="#services-mysql-create" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Crear MySQL</a></li>
+                        <li><a href="#services-redis-create" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Crear Redis</a></li>
+                        <li><a href="#services-redis-inspect" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Inspeccionar Redis</a></li>
+                        <li><a href="#services-redis-password" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Actualizar Pass Redis</a></li>
+                        <li><a href="#services-redis-tools" class="nav-link block pl-3 border-l-2 border-transparent hover:text-sky-500 transition-colors duration-200">Herramientas Redis</a></li>
                     </ul>
                 </div>
                  <div>
@@ -170,7 +182,7 @@
     "result": {
         "data": {
             "json": {
-                "token": "your-auth-token-string-here"
+                "token": "cmfszafj3001x07o8cy601e4y"
             }
         }
     }
@@ -196,11 +208,21 @@
     "result": {
         "data": {
             "json": {
-                "id": "session-id-string",
+                "id": "cmfsxbeze001u07o8c1tybz3c",
                 "createdAt": "2025-09-20T23:52:38.042Z",
                 "expiresAt": "2025-09-22T00:48:15.147Z",
-                "userId": "user-id-string",
+                "userId": "cmfqyw8lm000007o8aurc2opx",
                 "demoMode": false
+            },
+            "meta": {
+                "values": {
+                    "createdAt": [
+                        "Date"
+                    ],
+                    "expiresAt": [
+                        "Date"
+                    ]
+                }
             }
         }
     }
@@ -226,8 +248,26 @@
     "result": {
         "data": {
             "json": {
-                "projects": [ /* ... */ ],
-                "services": [ /* ... */ ]
+                "projects": [
+                    {
+                        "name": "n8n",
+                        "createdAt": "2025-09-19T15:02:16.730Z"
+                    }
+                ],
+                "services": [
+                    {
+                        "projectName": "n8n",
+                        "name": "n8n-service",
+                        "type": "app",
+                        "enabled": true
+                    },
+                    {
+                        "type": "redis",
+                        "projectName": "n8n",
+                        "name": "my-redis-cache",
+                        "enabled": true
+                    }
+                ]
             }
         }
     }
@@ -253,6 +293,27 @@
   "json": { "name": "new-project-name" }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "name": "new-project-name",
+                "createdAt": "2025-09-21T00:53:20.179Z"
+            },
+            "meta": {
+                "values": {
+                    "createdAt": [
+                        "Date"
+                    ]
+                }
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -270,6 +331,34 @@
                              <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
                                 <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
                                 <pre><code class="language-text text-slate-300">...inspectProject?input={"json":{"projectName":"my-project"}}</code></pre>
+                            </div>
+                            <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "project": {
+                    "name": "my-project",
+                    "createdAt": "2025-09-19T15:02:16.730Z"
+                },
+                "services": [
+                    {
+                        "projectName": "my-project",
+                        "name": "my-app-service",
+                        "type": "app",
+                        "enabled": true,
+                        "source": {
+                            "type": "image",
+                            "image": "nginx:latest"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}</code></pre>
                             </div>
                         </div>
                     </div>
@@ -291,12 +380,136 @@
   "json": { "name": "project-to-delete" }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="services-state">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Control de Estado del Servicio</h3>
+                <section id="services-app-create">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Crear Servicio de Aplicación</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Crea un nuevo servicio de aplicación vacío dentro de un proyecto.</p>
+                    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200">
+                           <span class="inline-block bg-green-100 text-green-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">POST</span>
+                           <code class="code-block text-slate-700">services.app.createService</code>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-slate-800 mb-2">Cuerpo de la Solicitud</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+  "json": {
+    "projectName": "my-project",
+    "serviceName": "new-app-service",
+    "domains": [ { "host": "$(EASYPANEL_DOMAIN)" } ]
+  }
+}</code></pre>
+                            </div>
+                            <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "projectName": "my-project",
+                "name": "new-app-service",
+                "type": "app",
+                "enabled": true,
+                "token": "2b855ed827af30dd70d124fb28fb35f4d76765953ec6e3f5",
+                "primaryDomainId": "cmft1rmjk002807o86g9o9vd2",
+                "env": "",
+                "deploy": {
+                    "replicas": 1,
+                    "command": null,
+                    "zeroDowntime": true
+                },
+                "mounts": [],
+                "ports": []
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services-app-source">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Actualizar Origen de la App</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Configura el código fuente o la imagen para un servicio de aplicación. Utilice solo uno de los siguientes métodos.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-semibold">Desde Imagen de Docker</h4>
+                            <code class="code-block text-xs bg-slate-100 p-1 rounded">services.app.updateSourceImage</code>
+                            <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative mt-2">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+  "json": {
+    "projectName": "my-project",
+    "serviceName": "my-app-service",
+    "image": "nginx:latest",
+    "username": "user (opcional)",
+    "password": "password (opcional)"
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-semibold">Desde Repositorio Git</h4>
+                            <code class="code-block text-xs bg-slate-100 p-1 rounded">services.app.updateSourceGit</code>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative mt-2">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+  "json": {
+    "projectName": "my-project",
+    "serviceName": "my-app-service",
+    "repo": "https://github.com/user/repo.git",
+    "ref": "main",
+    "path": "/"
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-semibold">Desde Dockerfile</h4>
+                            <code class="code-block text-xs bg-slate-100 p-1 rounded">services.app.updateSourceDockerfile</code>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative mt-2">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+  "json": {
+    "projectName": "my-project",
+    "serviceName": "my-app-service",
+    "dockerfile": "FROM node:18\nCOPY . .\nRUN npm install\nCMD [\"npm\", \"start\"]"
+  }
+}</code></pre>
+                            </div>
+                        </div>
+                         <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-semibold">Desde ZIP Subido</h4>
+                             <p class="text-sm text-slate-500 mt-1 mb-2">Esta es una solicitud `multipart/form-data`, no JSON.</p>
+                            <code class="code-block text-xs bg-slate-100 p-1 rounded">/api/upload-code/{project-name}/{service-name}</code>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="services-app-state">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Control de Estado del Servicio de App</h3>
                     <p class="text-slate-600 leading-relaxed mb-4">Inicia, detiene o reinicia un servicio de aplicación.</p>
                     <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
                         <div class="p-4 bg-slate-50 border-b border-slate-200">
@@ -314,12 +527,28 @@
   }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="services-deploy">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Desplegar Servicio</h3>
+                <section id="services-app-deploy">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Desplegar Servicio de App</h3>
                     <p class="text-slate-600 leading-relaxed mb-4">Inicia un nuevo despliegue para un servicio de aplicación existente.</p>
                      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
                         <div class="p-4 bg-slate-50 border-b border-slate-200">
@@ -337,12 +566,28 @@
   }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="services-delete">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Eliminar Servicio</h3>
+                <section id="services-app-delete">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Eliminar Servicio de App</h3>
                     <p class="text-slate-600 leading-relaxed mb-4">Elimina un servicio de un proyecto de forma permanente.</p>
                     <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
                         <div class="p-4 bg-slate-50 border-b border-slate-200">
@@ -360,11 +605,27 @@
   }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="services-env">
+                <section id="services-app-env">
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Actualizar Variables de Entorno</h3>
                     <p class="text-slate-600 leading-relaxed mb-4">Actualiza las variables de entorno para un servicio de aplicación.</p>
                      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
@@ -384,11 +645,27 @@
     }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="services-resources">
+                <section id="services-app-resources">
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Actualizar Recursos</h3>
                     <p class="text-slate-600 leading-relaxed mb-4">Actualiza las asignaciones de recursos de CPU y memoria para un servicio.</p>
                      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
@@ -413,17 +690,33 @@
     }
 }</code></pre>
                             </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
                         </div>
                     </div>
                 </section>
-                
-                <section id="templates-schema">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Crear desde Schema</h3>
-                    <p class="text-slate-600 leading-relaxed mb-4">Crea uno o más servicios dentro de un proyecto a partir de un esquema predefinido.</p>
+
+                <section id="services-mysql-create">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Crear Servicio MySQL</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Crea un nuevo servicio de base de datos MySQL.</p>
                      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
                         <div class="p-4 bg-slate-50 border-b border-slate-200">
                            <span class="inline-block bg-green-100 text-green-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">POST</span>
-                           <code class="code-block text-slate-700">templates.createFromSchema</code>
+                           <code class="code-block text-slate-700">services.mysql.createService</code>
                         </div>
                         <div class="p-4">
                             <h4 class="font-semibold text-slate-800 mb-2">Cuerpo de la Solicitud</h4>
@@ -432,11 +725,269 @@
                                 <pre><code class="language-json text-slate-300">{
     "json": {
         "projectName": "my-project",
-        "schema": {
-            "services": [ /* ... service definitions ... */ ]
+        "serviceName": "my-mysql-db",
+        "databaseName": "webapp_db",
+        "user": "db_user",
+        "password": "db_password",
+        "rootPassword": "root_password",
+        "image": "mysql:8.0"
+    }
+}</code></pre>
+                            </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "type": "mysql",
+                "projectName": "my-project",
+                "name": "my-mysql-db",
+                "databaseName": "webapp_db",
+                "user": "db_user",
+                "image": "mysql:8.0",
+                "enabled": true,
+                "exposedPort": 0,
+                "password": "db_password",
+                "rootPassword": "root_password",
+                "env": null,
+                "command": null
+            }
         }
     }
 }</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section id="services-redis-create">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Crear Servicio Redis</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Crea un nuevo servicio de caché Redis.</p>
+                     <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200">
+                           <span class="inline-block bg-green-100 text-green-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">POST</span>
+                           <code class="code-block text-slate-700">services.redis.createService</code>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-slate-800 mb-2">Cuerpo de la Solicitud</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "json": {
+        "projectName": "my-project",
+        "serviceName": "my-redis-cache",
+        "password": "redis_password",
+        "image": "redis:7"
+    }
+}</code></pre>
+                            </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "type": "redis",
+                "projectName": "my-project",
+                "name": "my-redis-cache",
+                "image": "redis:7",
+                "enabled": true,
+                "exposedPort": 0,
+                "password": "redis_password",
+                "env": null,
+                "command": null
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section id="services-redis-inspect">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Inspeccionar Servicio Redis</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Recupera información detallada para un servicio Redis, incluidas las credenciales.</p>
+                    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200">
+                           <span class="inline-block bg-sky-100 text-sky-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">GET</span>
+                           <code class="code-block text-slate-700">services.redis.inspectService</code>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-slate-800 mb-2">Parámetros de la Solicitud</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-text text-slate-300">...inspectService?input={"json":{"projectName":"...","serviceName":"..."}}</code></pre>
+                            </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "type": "redis",
+                "projectName": "my-project",
+                "name": "my-redis-cache",
+                "image": "redis:7",
+                "enabled": true,
+                "exposedPort": 0,
+                "password": "redis_password",
+                "env": null,
+                "command": null,
+                "redisCommanderDomain": "my-project-my-redis-cache-rediscommander.example.host",
+                "dbGateDomain": "my-project-my-redis-cache-dbgate.example.host"
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section id="services-redis-password">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Actualizar Contraseña de Redis</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Actualiza la contraseña para un servicio Redis. El usuario (`default`) y otras credenciales no se pueden cambiar a través de la API.</p>
+                     <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200">
+                           <span class="inline-block bg-green-100 text-green-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">POST</span>
+                           <code class="code-block text-slate-700">services.redis.updateCredentials</code>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-slate-800 mb-2">Cuerpo de la Solicitud</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "json": {
+        "projectName": "my-project",
+        "serviceName": "my-redis-cache",
+        "password": "new_strong_password"
+    }
+}</code></pre>
+                            </div>
+                            <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                 <section id="services-redis-tools">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Habilitar/Deshabilitar Herramientas de Redis</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Habilita o deshabilita herramientas de gestión como DbGate y Redis Commander para un servicio Redis.</p>
+                     <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200">
+                           <span class="inline-block bg-green-100 text-green-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">POST</span>
+                           <code class="code-block text-slate-700">services.redis.enableDbGate | disableDbGate | enableRedisCommander | disableRedisCommander</code>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-slate-800 mb-2">Cuerpo de la Solicitud</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "json": {
+        "projectName": "my-project",
+        "serviceName": "my-redis-cache"
+    }
+}</code></pre>
+                            </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": null,
+            "meta": {
+                "values": [
+                    "undefined"
+                ]
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="templates-schema">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Crear desde Schema</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">Crea uno o más servicios dentro de un proyecto a partir de un esquema predefinido. Esto es útil para desplegar aplicaciones complejas con múltiples componentes, como n8n con una base de datos de respaldo.</p>
+                     <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200">
+                           <span class="inline-block bg-green-100 text-green-700 text-sm font-bold mr-2 px-2.5 py-1 rounded-full">POST</span>
+                           <code class="code-block text-slate-700">templates.createFromSchema</code>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-semibold text-slate-800 mb-2">Ejemplo: Desplegando n8n</h4>
+                             <p class="text-sm text-slate-500 mt-1 mb-2">Este schema de ejemplo define un servicio de aplicación n8n.</p>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "json": {
+        "projectName": "my-n8n-project",
+        "schema": {
+            "services": [
+                {
+                    "type": "app",
+                    "data": {
+                        "projectName": "my-n8n-project",
+                        "serviceName": "my-n8n-instance",
+                        "source": {
+                            "type": "image",
+                            "image": "n8nio/n8n:latest"
+                        },
+                        "env": "DB_TYPE=postgresdb\\r\\nDB_POSTGRESDB_HOST=postgres.service.internal\\r\\n...",
+                        "deploy": { "replicas": 1, "zeroDowntime": true },
+                        "domains": [
+                            {
+                                "host": "n8n.$(EASYPANEL_DOMAIN)",
+                                "https": true,
+                                "port": 5678
+                            }
+                        ],
+                        "resources": { "memoryReservation": 1024, "cpuReservation": 1 }
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+                            </div>
+                             <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "type": "app",
+                "serviceName": "my-n8n-instance"
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                            <div class="mt-4 p-3 border border-yellow-200 bg-yellow-50 rounded-lg text-sm text-yellow-800">
+                                <p><span class="font-semibold">Nota:</span> Aún está pendiente una exploración más detallada de los schemas y las configuraciones avanzadas.</p>
                             </div>
                         </div>
                     </div>
@@ -455,6 +1006,29 @@
                              <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
                                 <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
                                 <pre><code class="language-text text-slate-300">...getServiceStats?input={"json":{"projectName":"...","serviceName":"..."}}</code></pre>
+                            </div>
+                            <h4 class="font-semibold text-slate-800 mt-4 mb-2">Respuesta Exitosa (200 OK)</h4>
+                             <div class="code-container bg-slate-800 rounded-lg p-4 text-sm relative">
+                                <button class="copy-btn absolute top-2 right-2 bg-slate-600 hover:bg-slate-500 text-white text-xs py-1 px-2 rounded">Copiar</button>
+                                <pre><code class="language-json text-slate-300">{
+    "result": {
+        "data": {
+            "json": {
+                "cpu": {
+                    "percent": 0
+                },
+                "memory": {
+                    "usage": 0,
+                    "percent": 0
+                },
+                "network": {
+                    "in": 0,
+                    "out": 0
+                }
+            }
+        }
+    }
+}</code></pre>
                             </div>
                         </div>
                     </div>
